@@ -24,19 +24,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    String ourData = ref.read<String>(stringProvider);
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Howdy'),
-      ),
-      body: Container(
-        child: Column(
-          children: [],
+      body: Center(
+        child: Text(
+          ourData,
+          style: const TextStyle(
+            fontSize: 48,
+            fontWeight: FontWeight.bold,
+            color: Colors.purple,
+          ),
         ),
       ),
     );
