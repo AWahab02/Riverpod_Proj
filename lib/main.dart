@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final stringProvider = Provider<String>(
   (ref) {
-    return 'Flutter Riverpod with AW';
+    return 'Flutter Riverpod with AW Zahid';
   },
 );
 
